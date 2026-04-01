@@ -13,6 +13,17 @@
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
+    .pulse-slow { animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.15; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(1.1); }
+    }
+    .rotate-slow { animation: rotate 10s linear infinite; }
+    @keyframes rotate {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .break-keep { word-break: keep-all; }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-900 overflow-x-hidden">
@@ -23,7 +34,7 @@
       <div class="hidden md:flex space-x-8 text-sm font-semibold text-slate-500">
         <a href="#" class="text-blue-600">Home</a>
         <a href="#resume" class="hover:text-blue-600 transition">Resume</a>
-        <a href="#" class="hover:text-blue-600 transition">Projects</a>
+        <a href="#portfolio" class="hover:text-blue-600 transition">Portfolio</a>
         <a href="#" class="hover:text-blue-600 transition border border-blue-200 px-4 py-1.5 rounded-full">Contact</a>
       </div>
     </div>
@@ -32,20 +43,18 @@
   <section class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
     <div class="absolute top-1/4 -left-20 w-96 h-96 bg-blue-100 rounded-full blur-[120px] opacity-60"></div>
     <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-indigo-100 rounded-full blur-[120px] opacity-60"></div>
-
     <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full z-10">
       <div class="order-2 lg:order-1 text-center lg:text-left">
         <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-50 border border-blue-100 text-blue-600 text-sm font-bold uppercase tracking-wider">About Me</div>
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight text-slate-950">날카로운 기획과<br>검증된 실행력을 가진<br> <span class="text-blue-600 font-black">박상현</span>입니다.</h1>
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight text-slate-950">날카로운 기획과<br>검증된 실행력<br> <span class="text-blue-600 font-black">박상현</span>입니다.</h1>
         <p class="text-lg md:text-xl text-slate-600 mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-          날카로운 기획으로 <span class="text-black font-black text-2xl">11.7억</span> 원의 수주를 견인하고 <span class="text-black font-black text-2xl">24.5억</span> 원 규모의 프로젝트를 완수하며 실행력을 검증받았습니다. 풍부한 경험과 전략적 매니지먼트를 통해 귀사에 실질적인 비즈니스 시너지를 더하겠습니다.
+          날카로운 기획으로 <span class="text-black font-black text-2xl">11.7억</span> 원의 수주를 견인하고 <span class="text-black font-black text-2xl">24.5억</span> 원 규모의 <br>프로젝트를 완수하며 실행력을 검증받았습니다. 풍부한 경험과 전략적 <br>매니지먼트를 통해 귀사에 실질적인 비즈니스 시너지를 더하겠습니다.
         </p>
         <div class="flex flex-wrap justify-center lg:justify-start gap-5">
           <a href="#resume" class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-xl font-bold transition-all transform hover:-translate-y-1 shadow-xl shadow-blue-200 inline-block">이력사항 보기</a>
-          <button class="bg-white hover:bg-slate-50 border border-slate-200 px-10 py-4 rounded-xl font-bold shadow-sm transition-colors">포트폴리오 보기</button>
+          <a href="#portfolio" class="bg-white hover:bg-slate-50 border border-slate-200 px-10 py-4 rounded-xl font-bold shadow-sm transition-all transform hover:-translate-y-1 inline-block">포트폴리오 보기</a>
         </div>
       </div>
-
       <div class="order-1 lg:order-2 flex justify-center relative mt-10 lg:mt-0">
         <div class="relative w-64 h-64 md:w-[420px] md:h-[420px]">
           <div class="absolute inset-0 bg-blue-200/40 rounded-full blur-[80px]"></div>
@@ -78,9 +87,8 @@
   </section>
 
   <section id="resume" class="py-32 md:py-48 bg-white relative z-20 border-t border-slate-100">
-    
     <div class="absolute top-10 left-0 w-full overflow-hidden leading-none select-none pointer-events-none opacity-[0.03]">
-      <h2 class="text-[15vw] font-black whitespace-nowrap">RESUME</h2>
+      <h2 class="text-[15vw] font-black whitespace-nowrap uppercase">RESUME</h2>
     </div>
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
@@ -95,11 +103,10 @@
             <p class="text-xl md:text-3xl text-blue-600 font-bold tracking-tight">Project Manager <span class="text-slate-300 mx-2">|</span> IMC Strategy Expert</p>
           </div>
         </div>
-        
         <div class="text-center md:text-right text-slate-500 font-semibold text-base md:text-lg space-y-2">
-          <p class="hover:text-blue-600 transition-colors">gowoo28@gmail.com</p>
-          <p class="hover:text-blue-600 transition-colors">010-8368-2022</p>
-          <p>Busan, Korea</p>
+          <p class="hover:text-blue-600 transition-colors font-bold tracking-tight break-keep">gowoo28@gmail.com</p>
+          <p class="hover:text-blue-600 transition-colors font-bold tracking-tight">010-8368-2022</p>
+          <p class="font-bold tracking-tight">Busan, Korea</p>
         </div>
       </div>
 
@@ -108,166 +115,129 @@
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Journey</h4>
           <div class="h-1 flex-grow bg-slate-100"></div>
         </div>
-        
         <div class="relative">
           <div class="absolute left-[11px] md:left-[50%] top-2 bottom-0 w-[2px] md:w-[4px] bg-slate-100 md:-translate-x-1/2"></div>
-
           <div class="space-y-24 md:space-y-32">
-            
             <div class="relative flex flex-col md:flex-row md:justify-between w-full group">
               <div class="absolute left-0 md:left-[50%] top-2 w-6 h-6 bg-blue-600 rounded-full ring-8 ring-white shadow-md md:-translate-x-1/2 group-hover:scale-125 transition-transform"></div>
-              
               <div class="pl-12 md:pl-0 md:w-1/2 md:text-right pt-0.5 md:pr-16">
                 <div class="text-lg md:text-2xl font-black text-blue-600 tracking-tight">2019. 12 ~ 2026. 03</div>
                 <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-2">Company</div>
               </div>
-              
               <div class="pl-12 md:pl-0 md:w-1/2 pt-4 md:pt-0 md:pl-16">
-                <h5 class="text-3xl md:text-5xl font-black text-slate-900 mb-3 tracking-tight">(주)와이위</h5>
+                <h5 class="text-3xl md:text-5xl font-black text-slate-900 mb-3 tracking-tight break-keep">(주)와이위</h5>
                 <p class="text-xl md:text-2xl text-slate-600 font-bold mb-5">전략기획실 PM</p>
                 <div class="space-y-4 text-sm text-slate-500 leading-relaxed"></div>
               </div>
             </div>
-
             <div class="relative flex flex-col md:flex-row md:justify-between w-full group">
               <div class="absolute left-0 md:left-[50%] top-2 w-6 h-6 bg-slate-300 rounded-full ring-8 ring-white shadow-md md:-translate-x-1/2 group-hover:scale-125 transition-transform"></div>
-              
               <div class="pl-12 md:pl-0 md:w-1/2 md:text-right pt-0.5 md:pr-16">
                 <div class="text-lg md:text-xl font-bold text-slate-500 tracking-tight">2013. 03 ~ 2020. 02</div>
                 <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-2">University</div>
               </div>
-              
               <div class="pl-12 md:pl-0 md:w-1/2 pt-4 md:pt-0 md:pl-16">
-                <h5 class="text-2xl md:text-4xl font-black text-slate-800 mb-3 tracking-tight">경성대학교</h5>
+                <h5 class="text-2xl md:text-4xl font-black text-slate-800 mb-3 tracking-tight break-keep">경성대학교</h5>
                 <p class="text-lg md:text-xl text-slate-500 font-bold">광고홍보학과</p>
               </div>
             </div>
-
             <div class="relative flex flex-col md:flex-row md:justify-between w-full group">
               <div class="absolute left-0 md:left-[50%] top-2 w-6 h-6 bg-slate-200 rounded-full ring-8 ring-white shadow-md md:-translate-x-1/2 group-hover:scale-125 transition-transform"></div>
-              
               <div class="pl-12 md:pl-0 md:w-1/2 md:text-right pt-0.5 md:pr-16">
                 <div class="text-lg md:text-xl font-bold text-slate-500 tracking-tight">2010. 03 ~ 2013. 02</div>
                 <div class="text-sm font-bold text-slate-400 uppercase tracking-widest mt-2">High School</div>
               </div>
-              
               <div class="pl-12 md:pl-0 md:w-1/2 pt-4 md:pt-0 md:pl-16">
-                <h5 class="text-2xl md:text-3xl font-black text-slate-700 mb-3 tracking-tight">부산중앙고등학교</h5>
+                <h5 class="text-2xl md:text-3xl font-black text-slate-700 mb-3 tracking-tight break-keep">부산중앙고등학교</h5>
                 <p class="text-lg text-slate-500 font-bold">문과</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
 
-      <div class="space-y-32 md:space-y-48">
+      <div class="mb-48 max-w-4xl mx-auto">
+        <div class="flex items-center gap-6 mb-20">
+          <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Certifications</h4>
+          <div class="h-1 flex-grow bg-slate-100"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="group relative overflow-hidden bg-white border-2 border-slate-100 p-8 rounded-3xl transition-all hover:border-blue-600">
+             <div class="absolute top-4 right-6 text-slate-100 group-hover:text-blue-50 font-black text-4xl transition-colors">2018</div>
+             <p class="text-slate-400 group-hover:text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">Adobe Certified</p>
+             <h5 class="text-slate-900 text-2xl font-black tracking-tight">ACA Illustrator</h5>
+          </div>
+          <div class="group relative overflow-hidden bg-white border-2 border-slate-100 p-8 rounded-3xl transition-all hover:border-blue-600">
+             <div class="absolute top-4 right-6 text-slate-100 group-hover:text-blue-50 font-black text-4xl transition-colors">2017</div>
+             <p class="text-slate-400 group-hover:text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">Adobe Certified</p>
+             <h5 class="text-slate-900 text-2xl font-black tracking-tight">ACA Indesign</h5>
+          </div>
+          <div class="group relative overflow-hidden bg-white border-2 border-slate-100 p-8 rounded-3xl transition-all hover:border-blue-600">
+             <div class="absolute top-4 right-6 text-slate-100 group-hover:text-blue-50 font-black text-4xl transition-colors">2017</div>
+             <p class="text-slate-400 group-hover:text-blue-600 text-xs font-bold uppercase tracking-widest mb-2">Adobe Certified</p>
+             <h5 class="text-slate-900 text-2xl font-black tracking-tight">ACA Photoshop</h5>
+          </div>
+          <div class="group relative overflow-hidden bg-slate-100 p-8 rounded-3xl transition-all hover:bg-slate-200">
+             <div class="absolute top-4 right-6 text-slate-200 group-hover:text-slate-300 font-black text-4xl transition-colors">2013</div>
+             <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Government</p>
+             <h5 class="text-slate-900 text-2xl font-black tracking-tight">1종보통 운전면허</h5>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-48 max-w-4xl mx-auto">
+        <div class="flex items-center gap-6 mb-20">
+          <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Awards</h4>
+          <div class="h-1 flex-grow bg-slate-100"></div>
+        </div>
+        <div class="relative overflow-hidden bg-blue-600 rounded-[40px] p-10 md:p-20 shadow-2xl group">
+           <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-400 rounded-full opacity-30 group-hover:scale-150 transition-transform duration-700"></div>
+           <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-white rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
+           <div class="relative z-10 flex flex-col items-center text-center">
+              <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-8">
+                 <span class="text-white text-3xl">🏆</span>
+              </div>
+              <p class="text-blue-100 font-bold uppercase tracking-[0.3em] text-sm mb-4">December 2023 / Industry Achievement</p>
+              <h5 class="text-white text-3xl md:text-5xl font-black leading-tight break-keep mb-8">
+                한국공공브랜드 대상<br>
+                <span class="underline decoration-white/30 underline-offset-8">정부·브랜드 캠페인 부문 대상</span>
+              </h5>
+              <div class="px-6 py-2 bg-white text-blue-600 rounded-full font-black text-sm uppercase tracking-widest">
+                한국공공브랜드진흥원 · 산업통상부
+              </div>
+           </div>
+        </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto w-full pb-24 border-t border-slate-100 pt-32">
+        <div class="flex items-center gap-6 mb-20">
+          <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Strengths</h4>
+          <div class="h-1 flex-grow bg-slate-100"></div>
+        </div>
         
-        <div class="max-w-4xl mx-auto w-full">
-          <div class="flex items-center gap-6 mb-16 md:mb-20">
-            <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Certifications</h4>
-            <div class="h-1 flex-grow bg-slate-100"></div>
-          </div>
-          <div class="space-y-8 w-full">
-            <div class="flex justify-between items-end border-b border-slate-100 pb-6 hover:border-blue-600 transition-colors group">
-              <div>
-                <div class="text-xl md:text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">ACA Illustrator</div>
-                <div class="text-base font-semibold text-slate-400">Adobe</div>
-              </div>
-              <div class="text-lg md:text-xl font-black text-slate-300 group-hover:text-blue-600 transition-colors">2018. 01</div>
-            </div>
-            <div class="flex justify-between items-end border-b border-slate-100 pb-6 hover:border-blue-600 transition-colors group">
-              <div>
-                <div class="text-xl md:text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">ACA Indesign</div>
-                <div class="text-base font-semibold text-slate-400">Adobe</div>
-              </div>
-              <div class="text-lg md:text-xl font-black text-slate-300 group-hover:text-blue-600 transition-colors">2017. 07</div>
-            </div>
-            <div class="flex justify-between items-end border-b border-slate-100 pb-6 hover:border-blue-600 transition-colors group">
-              <div>
-                <div class="text-xl md:text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">ACA Photoshop</div>
-                <div class="text-base font-semibold text-slate-400">Adobe</div>
-              </div>
-              <div class="text-lg md:text-xl font-black text-slate-300 group-hover:text-blue-600 transition-colors">2017. 06</div>
-            </div>
-            <div class="flex justify-between items-end border-b border-slate-100 pb-6 hover:border-blue-600 transition-colors group">
-              <div>
-                <div class="text-xl md:text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors mb-2">1종보통 운전면허</div>
-                <div class="text-base font-semibold text-slate-400">경찰청</div>
-              </div>
-              <div class="text-lg md:text-xl font-black text-slate-300 group-hover:text-blue-600 transition-colors">2013. 02</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="max-w-4xl mx-auto w-full">
-          <div class="flex items-center gap-6 mb-16 md:mb-20">
-            <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Awards</h4>
-            <div class="h-1 flex-grow bg-slate-100"></div>
-          </div>
-          <div class="bg-slate-50 p-10 md:p-14 rounded-3xl border border-slate-100 hover:shadow-xl hover:-translate-y-2 transition-all w-full flex flex-col items-start text-left">
-            <div class="text-blue-600 font-black text-sm tracking-widest uppercase mb-5">2023. 12 / 한국공공브랜드진흥원 · 산업통상부</div>
-            <div class="text-3xl md:text-5xl font-black text-slate-900 leading-tight">한국공공브랜드 대상<br><span class="text-blue-600 block mt-3">정부·브랜드 캠페인 부문 대상</span></div>
-          </div>
-        </div>
-
-        <div class="max-w-6xl mx-auto w-full"> <div class="flex items-center gap-6 mb-16 md:mb-20">
-            <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Strengths</h4>
-            <div class="h-1 flex-grow bg-slate-100"></div>
-          </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
           
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6 w-full text-left">
-            
-            <div class="relative overflow-hidden bg-slate-900 rounded-3xl p-6 xl:p-8 hover:-translate-y-2 transition-transform duration-300 shadow-lg min-h-[220px] flex flex-col justify-end">
-              <div class="absolute -right-8 -bottom-8 opacity-20 flex pointer-events-none">
-                <div class="w-32 h-32 rounded-full border-4 border-blue-500 absolute top-4 left-4"></div>
-                <div class="w-40 h-40 rounded-full border-4 border-slate-500 border-dashed absolute top-0 left-0"></div>
-              </div>
-              <div class="relative z-10">
-                <div class="text-blue-400 font-bold tracking-widest text-xs mb-3 uppercase">01. Strategy</div>
-                <h5 class="text-xl xl:text-2xl font-black text-white leading-tight tracking-tight">분석 및<br>기획능력</h5>
-              </div>
-            </div>
-
-            <div class="relative overflow-hidden bg-slate-100 rounded-3xl p-6 xl:p-8 hover:-translate-y-2 transition-transform duration-300 border border-slate-200 shadow-sm min-h-[220px] flex flex-col justify-end">
-              <div class="absolute -right-6 -bottom-6 opacity-20 pointer-events-none">
-                <div class="w-24 h-24 bg-slate-400 rounded-xl absolute bottom-0 right-10 rotate-12"></div>
-                <div class="w-20 h-20 bg-blue-500 rounded-xl absolute bottom-10 right-0 -rotate-12"></div>
-              </div>
-              <div class="relative z-10">
-                <div class="text-blue-600 font-bold tracking-widest text-xs mb-3 uppercase">02. Management</div>
-                <h5 class="text-xl xl:text-2xl font-black text-slate-900 leading-tight tracking-tight">프로젝트<br>관리능력</h5>
-              </div>
-            </div>
-
-            <div class="relative overflow-hidden bg-white rounded-3xl p-6 xl:p-8 hover:-translate-y-2 hover:border-blue-300 transition-all duration-300 border-2 border-slate-100 shadow-sm min-h-[220px] flex flex-col justify-end">
-              <div class="absolute -right-4 -bottom-4 opacity-10 pointer-events-none flex gap-2">
-                <div class="w-24 h-24 rounded-full bg-slate-900"></div>
-                <div class="w-24 h-24 rounded-full bg-blue-600 -ml-12 mix-blend-multiply"></div>
-              </div>
-              <div class="relative z-10">
-                <div class="text-blue-600 font-bold tracking-widest text-xs mb-3 uppercase">03. Communication</div>
-                <h5 class="text-xl xl:text-2xl font-black text-slate-900 leading-tight tracking-tight">커뮤니케이션<br>능력</h5>
-              </div>
-            </div>
-
-            <div class="relative overflow-hidden bg-blue-600 rounded-3xl p-6 xl:p-8 hover:-translate-y-2 transition-transform duration-300 shadow-xl shadow-blue-200 min-h-[220px] flex flex-col justify-end">
-              <div class="absolute -right-2 -bottom-2 opacity-30 pointer-events-none">
-                <svg width="120" height="120" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" fill="white"/>
-                </svg>
-                <div class="w-4 h-4 rounded-full bg-white absolute top-4 left-4"></div>
-                <div class="w-2 h-2 rounded-full bg-white absolute bottom-10 left-10"></div>
-              </div>
-              <div class="relative z-10">
-                <div class="text-blue-200 font-bold tracking-widest text-xs mb-3 uppercase">04. AI Tools</div>
-                <h5 class="text-xl xl:text-2xl font-black text-white leading-tight tracking-tight">AI 프로그램<br>활용 능력</h5>
-              </div>
-            </div>
-
+          <div class="group flex flex-col items-center text-center gap-4">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#Strategy Thinking</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#분석 및 기획 능력</h5>
           </div>
-        </div>
 
+          <div class="group flex flex-col items-center text-center gap-4">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#Project Management</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#프로젝트 관리 능력</h5>
+          </div>
+
+          <div class="group flex flex-col items-center text-center gap-4">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#Communication</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#커뮤니케이션 능력</h5>
+          </div>
+
+          <div class="group flex flex-col items-center text-center gap-4">
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#AI Innovation</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#AI 프로그램 활용 능력</h5>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
