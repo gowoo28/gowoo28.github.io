@@ -86,9 +86,14 @@
     </div>
   </section>
 
-  <section id="resume" class="py-24 md:py-32 bg-white relative z-20 border-t border-slate-100">
-    <div class="absolute top-10 left-0 w-full overflow-hidden leading-none select-none pointer-events-none opacity-[0.03]">
-      <h2 class="text-[15vw] font-black whitespace-nowrap uppercase">RESUME</h2>
+  <section id="resume" class="py-24 md:py-32 bg-white relative z-20 border-t border-slate-100 overflow-hidden">
+    
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+      <div class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-indigo-50/40 rounded-full blur-[150px]"></div>
+      <div class="absolute top-10 left-0 w-full overflow-hidden leading-none select-none opacity-[0.03]">
+        <h2 class="text-[15vw] font-black whitespace-nowrap uppercase">RESUME</h2>
+      </div>
     </div>
 
     <div class="max-w-6xl mx-auto px-6 relative z-10">
@@ -190,53 +195,75 @@
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Awards</h4>
           <div class="h-1 flex-grow bg-slate-100"></div>
         </div>
-        <div class="relative overflow-hidden bg-blue-600 rounded-[40px] p-10 md:p-20 shadow-2xl group">
-           <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-400 rounded-full opacity-30 group-hover:scale-150 transition-transform duration-700"></div>
-           <div class="absolute -bottom-20 -left-20 w-48 h-48 bg-white rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
+        <div class="relative overflow-hidden bg-blue-600 rounded-[32px] p-8 md:p-12 shadow-xl group border border-blue-700">
+           <div class="absolute -top-16 -right-16 w-48 h-48 bg-blue-400 rounded-full opacity-30 group-hover:scale-150 transition-transform duration-700"></div>
+           <div class="absolute -bottom-16 -left-16 w-32 h-32 bg-white rounded-full opacity-10 group-hover:scale-125 transition-transform duration-700"></div>
            <div class="relative z-10 flex flex-col items-center text-center">
-              <div class="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center mb-8 border border-white/20 shadow-inner">
-                 <span class="text-white text-3xl group-hover:scale-110 transition-transform">🏆</span>
+              <div class="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 border border-white/20 shadow-inner">
+                 <span class="text-white text-2xl group-hover:scale-110 transition-transform">🏆</span>
               </div>
-              <p class="text-blue-100 font-bold uppercase tracking-[0.3em] text-sm mb-6 opacity-80">December 2023 / Industry Achievement</p>
-              <div class="text-white break-keep mb-12 flex flex-col gap-3">
-                <span class="text-2xl md:text-3xl font-bold opacity-90 leading-snug">한국공공브랜드 대상</span>
-                <h5 class="text-3xl md:text-5xl font-black leading-tight">
-                  <span class="underline decoration-white/30 underline-offset-8">정부·브랜드 캠페인 부문 대상</span>
+              <p class="text-blue-100 font-bold uppercase tracking-[0.3em] text-xs md:text-sm mb-4 opacity-80">December 2023 / Industry Achievement</p>
+              
+              <div class="text-white break-keep mb-8 flex flex-col gap-2">
+                <p class="text-xl md:text-2xl font-bold opacity-90 leading-snug">한국공공브랜드 대상</p>
+                <h5 class="text-2xl md:text-4xl font-black leading-tight">
+                  정부·브랜드 캠페인 부문 대상
                 </h5>
               </div>
-              <div class="px-6 py-2.5 bg-white text-blue-600 rounded-full font-black text-sm uppercase tracking-widest shadow-xl">
+
+              <div class="px-5 py-2 bg-white text-blue-600 rounded-full font-black text-xs md:text-sm uppercase tracking-widest shadow-md">
                 한국공공브랜드진흥원 · 산업통상부
               </div>
            </div>
         </div>
       </div>
 
-      <div class="max-w-6xl mx-auto w-full pb-24">
+      <div class="max-w-4xl mx-auto w-full pb-24 relative z-10">
         <div class="flex items-center gap-6 mb-12 md:mb-16">
           <h4 class="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter">Strengths</h4>
           <div class="h-1 flex-grow bg-slate-100"></div>
         </div>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           
-          <div class="group flex flex-col items-center text-center gap-4 hover:text-blue-600 transition-colors">
-            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#Strategy Thinking</span>
-            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#분석 및 기획 능력</h5>
+          <div class="group relative flex flex-col items-center justify-center text-center gap-2 p-10 bg-white hover:bg-slate-50 transition-colors duration-500 cursor-pointer shadow-sm rounded-2xl">
+            <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tl-xl"></div>
+            <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tr-xl"></div>
+            <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-bl-xl"></div>
+            <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-br-xl"></div>
+            
+            <span class="text-xs font-bold text-slate-400 group-hover:text-blue-600 uppercase tracking-widest whitespace-nowrap transition-colors duration-300">Strategic Thinking</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">분석 및 기획 능력</h5>
           </div>
 
-          <div class="group flex flex-col items-center text-center gap-4 hover:text-blue-600 transition-colors">
-            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#Project Management</span>
-            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#프로젝트 관리 능력</h5>
+          <div class="group relative flex flex-col items-center justify-center text-center gap-2 p-10 bg-white hover:bg-slate-50 transition-colors duration-500 cursor-pointer shadow-sm rounded-2xl">
+            <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tl-xl"></div>
+            <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tr-xl"></div>
+            <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-bl-xl"></div>
+            <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-br-xl"></div>
+            
+            <span class="text-xs font-bold text-slate-400 group-hover:text-blue-600 uppercase tracking-widest whitespace-nowrap transition-colors duration-300">Project Management</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">프로젝트 관리 능력</h5>
           </div>
 
-          <div class="group flex flex-col items-center text-center gap-4 hover:text-blue-600 transition-colors">
-            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#Communication</span>
-            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#커뮤니케이션 능력</h5>
+          <div class="group relative flex flex-col items-center justify-center text-center gap-2 p-10 bg-white hover:bg-slate-50 transition-colors duration-500 cursor-pointer shadow-sm rounded-2xl">
+            <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tl-xl"></div>
+            <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tr-xl"></div>
+            <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-bl-xl"></div>
+            <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-br-xl"></div>
+            
+            <span class="text-xs font-bold text-slate-400 group-hover:text-blue-600 uppercase tracking-widest whitespace-nowrap transition-colors duration-300">Communication</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">커뮤니케이션 능력</h5>
           </div>
 
-          <div class="group flex flex-col items-center text-center gap-4 hover:text-blue-600 transition-colors">
-            <span class="text-xs font-bold text-blue-600 uppercase tracking-widest break-keep">#AI Innovation</span>
-            <h5 class="text-xl md:text-2xl font-black text-slate-900 break-keep group-hover:text-blue-600 transition-colors">#AI 프로그램 활용 능력</h5>
+          <div class="group relative flex flex-col items-center justify-center text-center gap-2 p-10 bg-white hover:bg-slate-50 transition-colors duration-500 cursor-pointer shadow-sm rounded-2xl">
+            <div class="absolute top-0 left-0 w-4 h-4 border-t-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tl-xl"></div>
+            <div class="absolute top-0 right-0 w-4 h-4 border-t-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-tr-xl"></div>
+            <div class="absolute bottom-0 left-0 w-4 h-4 border-b-2 border-l-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-bl-xl"></div>
+            <div class="absolute bottom-0 right-0 w-4 h-4 border-b-2 border-r-2 border-slate-300 group-hover:border-blue-600 group-hover:w-8 group-hover:h-8 transition-all duration-500 rounded-br-xl"></div>
+            
+            <span class="text-xs font-bold text-slate-400 group-hover:text-blue-600 uppercase tracking-widest whitespace-nowrap transition-colors duration-300">AI Innovation</span>
+            <h5 class="text-xl md:text-2xl font-black text-slate-900 group-hover:text-blue-600 transition-colors duration-300 whitespace-nowrap">AI 프로그램 활용 능력</h5>
           </div>
 
         </div>
